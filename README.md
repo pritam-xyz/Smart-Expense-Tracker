@@ -6,7 +6,8 @@ A simple Python project to store daily expenses using CSV file.
 
 - Add Expense
 - View Expenses
-- Calculate Total Expense
+- Calculate Total Expenses
+- Delete Expenses
 
 ## Technology Used
 
