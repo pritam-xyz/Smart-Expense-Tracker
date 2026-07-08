@@ -13,7 +13,7 @@ A simple Python project to store daily expenses using CSV file.
 
 - Python
 - CSV File
-- logics
+
 
 ## How to Run
 
