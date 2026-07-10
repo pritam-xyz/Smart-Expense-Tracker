@@ -9,7 +9,7 @@ A simple Python project to store daily expenses using CSV file.
 - Calculate Total Expenses
 - Delete Expenses
 
-## Technology Used
+## Technology Used In Smart Expense Tracker
 
 - Python
 - CSV File
