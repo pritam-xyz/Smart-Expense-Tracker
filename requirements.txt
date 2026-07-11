@@ -1,1 +1,1 @@
-# No external libraries required in this smart expenses tracker but in some time i add externals libraray !
+# No external libraries required in this smart expenses tracker but in some time i add externals libraray so its time to add!
