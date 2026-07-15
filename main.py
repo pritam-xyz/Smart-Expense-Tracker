@@ -1,5 +1,6 @@
 import csv
 import os
+from datetime import datetime
 
 file_name = "expenses.csv"
 
@@ -7,7 +8,7 @@ file_name = "expenses.csv"
 if not os.path.exists(file_name):
     file = open(file_name, "w", newline="")
     writer = csv.writer(file)
-    writer.writerow(["Title", "Amount"])
+    writer.writerow(["Title", "Amount", "Date"])
     file.close()
 
 while True:
@@ -25,9 +26,11 @@ while True:
         title = input("Expense Name: ")
         amount = input("Amount: ")
 
+        date = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+
         file = open(file_name, "a", newline="")
         writer = csv.writer(file)
-        writer.writerow([title, amount])
+        writer.writerow([title, amount, date])
         file.close()
 
         print("Expense Added Successfully!")
@@ -35,12 +38,14 @@ while True:
     # View Expenses
     elif choice == "2":
         file = open(file_name, "r")
-        reader = csv.reader(file)
+        reader = csv.DictReader(file)
 
         print("\n------ Expenses ------")
 
+        count = 1
         for row in reader:
-            print(row)
+            print(f"{count}. {row['Title']} - ₹{row['Amount']} - {row['Date']}")
+            count += 1
 
         file.close()
 
@@ -52,7 +57,7 @@ while True:
         total = 0
 
         for row in reader:
-            total = total + float(row["Amount"])
+            total += float(row["Amount"])
 
         file.close()
 
@@ -70,7 +75,7 @@ while True:
 
         for row in reader:
             expenses.append(row)
-            print(index, ".", row["Title"], "- ₹", row["Amount"])
+            print(f"{index}. {row['Title']} - ₹{row['Amount']} - {row['Date']}")
             index += 1
 
         file.close()
@@ -86,10 +91,14 @@ while True:
                 file = open(file_name, "w", newline="")
                 writer = csv.writer(file)
 
-                writer.writerow(["Title", "Amount"])
+                writer.writerow(["Title", "Amount", "Date"])
 
                 for expense in expenses:
-                    writer.writerow([expense["Title"], expense["Amount"]])
+                    writer.writerow([
+                        expense["Title"],
+                        expense["Amount"],
+                        expense["Date"]
+                    ])
 
                 file.close()
 
