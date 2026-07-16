@@ -1,1 +1,2 @@
-# No external libraries required in this smart expenses tracker!
+# No external libraries required.
+# Uses only Python built-in modules.
