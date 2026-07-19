@@ -9,7 +9,7 @@ A simple Expense Tracker built using Python. This project allows users to add, v
 - Calculate total expenses
 - Delete any expense
 - Automatically saves Date & Time
-- Stores data in CSV format
+
 
 ## 🛠️ Technologies Used
 
