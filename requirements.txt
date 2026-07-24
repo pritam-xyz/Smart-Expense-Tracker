@@ -1,2 +1,2 @@
-# No external libraries required.
+# No external libraries required but in future!
 # Uses only Python built-in modules.
