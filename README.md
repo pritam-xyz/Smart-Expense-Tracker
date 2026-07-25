@@ -8,7 +8,6 @@ A simple Expense Tracker built using Python. This project allows users to add, v
 - View all expenses
 - Calculate total expenses
 - Delete any expense
-- Automatically saves Date
 
 
 ## 🛠️ Technologies Used
@@ -63,4 +62,4 @@ This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-Pritam Kumar
+Pritam Kumar Singh
