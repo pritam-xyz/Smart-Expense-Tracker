@@ -19,7 +19,7 @@ A simple Expense Tracker built using Python. This project allows users to add, v
 
 ## 📂 Project Structure
 
-Expense-Tracker/
+Expense-Tracker project
 │── expense_tracker.py
 │── expenses.csv
 │── README.md
